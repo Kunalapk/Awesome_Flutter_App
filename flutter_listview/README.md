@@ -14,7 +14,7 @@ english_words: ^3.1.0
 </pre>
 
 <p>This is how your pubspec.yaml might look like:</p>
-<pre>
+```
 name: flutter_list
 description: A new Flutter application.
 
@@ -74,4 +74,4 @@ flutter:
   # For details regarding fonts from package dependencies, 
   # see https://flutter.io/custom-fonts/#from-packages
   
-  </pre>
+  ```
