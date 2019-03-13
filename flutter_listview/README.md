@@ -130,25 +130,54 @@ Widget _buildRow(WordPair pair) {
 
 <p>Here’s how your main.dart should look like at the end:</p>
 <pre>
-mport 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
-void main() => runApp(new MyApp());
 
-class MyApp extends StatelessWidget {
+
+void main() => runApp(MainApp());
+
+class MainApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "List in Flutter",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: Text("List"),
-        ),
-        body: RandomWords(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: MyHomePage(title: 'My Flutter App'),
     );
   }
 }
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+        home: new Scaffold(
+          appBar: new AppBar(
+            title: Text("Home"),
+            textTheme: Theme.of(context).textTheme.apply(
+                bodyColor: Colors.black
+            ),
+            backgroundColor: Colors.white,
+          ),
+          body: RandomWords(),
+        )
+    );
+  }
+}
+
 
 class RandomWords extends StatefulWidget {
   @override
@@ -165,9 +194,6 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     return Scaffold (
-      appBar: AppBar(
-        title: Text('Startup Name Generator'),
-      ),
       body: _buildSuggestions(),
     );
   }
@@ -195,4 +221,5 @@ class RandomWordsState extends State<RandomWords> {
     );
   }
 }
+
 </pre>
