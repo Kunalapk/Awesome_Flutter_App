@@ -30,7 +30,7 @@
 
 
 
-<h2>Installation on WINDOWS<h2>
+<h2>Installation on WINDOWS</h2>
   <ul>
     <li>If you don’t have Git installed in your system, then please do before downloading the Flutter Bundle from flutter SDK and make sure you have Xcode and Android Studio installed as well.</li>
     <li>Download the flutter SDK and unzip in any location you prefer by not under c:/program files/ as it requires more permission privileges.</li>
